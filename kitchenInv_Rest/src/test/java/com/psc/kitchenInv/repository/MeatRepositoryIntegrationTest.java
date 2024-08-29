@@ -47,6 +47,7 @@ public class MeatRepositoryIntegrationTest {
 
         assertThat(results).hasSize(3);
         assertThat(results).containsExactly(m1, m2, m3);
-
     }
+
+
 }
