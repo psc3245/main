@@ -1,6 +1,6 @@
-package com.psc.kitchenInv;
+package com.psc.kitchenInv.dto;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,27 +10,17 @@ import util.MeatType;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 @Data
 @Builder
-@Table(name="meat")
-public class Meat {
+public class MeatDTO {
 
-
-    @Id
-    @Column(name="id")
-    //@GeneratedValue(strategy=GenerationType.AUTO)
     Long id;
 
-    @Column(name="name")
     private String name;
 
-    @Column(name="meatClass")
     private MeatClass meatClass;
 
-    @Column(name="meatType")
     private MeatType meatType;
 
-    @Column(name="age")
     private int age;
 }

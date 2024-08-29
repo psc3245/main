@@ -17,7 +17,6 @@ import util.FruitClass;
 public class Fruit {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "fruit_id_seq")
     @Column(name="id")
     private Long id;
 

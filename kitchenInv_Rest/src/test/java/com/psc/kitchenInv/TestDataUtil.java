@@ -1,6 +1,7 @@
 package com.psc.kitchenInv;
 
 import com.psc.kitchenInv.dto.FruitDTO;
+import com.psc.kitchenInv.dto.MeatDTO;
 import com.psc.kitchenInv.dto.VegetableDTO;
 import util.*;
 
@@ -71,6 +72,42 @@ public class TestDataUtil {
         return VegetableDTO.builder().name("celery")
                 .id(4L)
                 .vegClass(VegetableClass.EDIBLE_STEM)
+                .age(0)
+                .build();
+    }
+
+    public static Meat buildMeatA() {
+        return Meat.builder().name("ground beef")
+                .id(1L)
+                .meatClass(MeatClass.BEEF)
+                .meatType(MeatType.GROUND)
+                .age(0)
+                .build();
+    }
+
+    public static Meat buildMeatB() {
+        return Meat.builder().name("pork shoulder")
+                .id(2L)
+                .meatClass(MeatClass.PORK)
+                .meatType(MeatType.CUT)
+                .age(0)
+                .build();
+    }
+
+    public static Meat buildMeatC() {
+        return Meat.builder().name("turkey jerky")
+                .id(3L)
+                .meatClass(MeatClass.TURKEY)
+                .meatType(MeatType.DRIED)
+                .age(0)
+                .build();
+    }
+
+    public static MeatDTO buildMeatDTO() {
+        return MeatDTO.builder().name("tuna")
+                .id(4L)
+                .meatClass(MeatClass.FISH)
+                .meatType(MeatType.CANNED)
                 .age(0)
                 .build();
     }

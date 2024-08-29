@@ -16,7 +16,6 @@ import util.VegetableClass;
 public class Vegetable {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "vegetable_id_seq")
     @Column(name="id")
     private Long id;
 
