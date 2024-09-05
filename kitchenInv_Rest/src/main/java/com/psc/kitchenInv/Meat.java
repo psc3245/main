@@ -19,7 +19,6 @@ public class Meat {
 
     @Id
     @Column(name="id")
-    //@GeneratedValue(strategy=GenerationType.AUTO)
     Long id;
 
     @Column(name="name")

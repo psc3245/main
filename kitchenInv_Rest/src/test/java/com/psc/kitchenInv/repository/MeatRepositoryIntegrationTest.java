@@ -49,5 +49,29 @@ public class MeatRepositoryIntegrationTest {
         assertThat(results).containsExactly(m1, m2, m3);
     }
 
+    @Test
+    public void TestThatMeatCanBeFullUpdated() {
+        Meat m1 = TestDataUtil.buildMeatA();
+        underTest.save(m1);
+        m1.setName("updated");
+        underTest.save(m1);
+
+        Optional<Meat> result = underTest.findById(m1.getId());
+
+        assertThat(result.get().getName()).isEqualTo("updated");
+    }
+
+    @Test
+    public void TestThatMeatCanBeDeleted() {
+        Meat m1 = TestDataUtil.buildMeatA();
+        underTest.save(m1);
+
+        underTest.deleteById(m1.getId());
+
+        Optional<Meat> result = underTest.findById(m1.getId());
+
+        assertThat(result).isEmpty();
+    }
+
 
 }

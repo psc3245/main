@@ -229,7 +229,7 @@ public class FruitControllerIntegrationTest {
     }
 
     @Test
-    public void TestThatDeleteFruitReturnsHttpStatus204OnExistingAuthor() throws Exception {
+    public void TestThatDeleteFruitReturnsHttpStatus204OnExistingFruit() throws Exception {
         Fruit f = TestDataUtil.buildFruitA();
         Fruit saved = fruitService.save(f);
 
